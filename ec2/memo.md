@@ -20,6 +20,14 @@ terraform apply
 terraform destroy
 ```
 
+## 変数を指定
+
+`main.tf` の内容で変数を定義し、実行時に値を渡す場合は以下
+
+```sh
+terraform plan -var 'example_instance_type=t3.nano'
+```
+
 ## .gitignore
 
 参考なりそうなのはこのあたり
