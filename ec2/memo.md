@@ -28,6 +28,12 @@ terraform destroy
 terraform plan -var 'example_instance_type=t3.nano'
 ```
 
+環境変数でも指定可能
+
+```sh
+TF_VAR_example_instance_type='t3.nano'
+```
+
 ## .gitignore
 
 参考なりそうなのはこのあたり
