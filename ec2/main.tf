@@ -2,9 +2,13 @@ variable "example_instance_type" {
     default = "t2.micro"
 }
 
+locals {
+    example_ami_id = "ami-0bcc04d20228d0cf6"
+}
+
 resource "aws_instance" "tf-example" {
     # TODO:最新のAmazon Linuxのバージョンを指定できるように変更する
-    ami           = "ami-0bcc04d20228d0cf6"
+    ami           = local.example_ami_id
     instance_type = var.example_instance_type
 
     tags = {
