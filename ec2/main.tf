@@ -23,3 +23,7 @@ systemctl enable httpd.service
 systemctl start httpd.service
     EOF
 }
+
+output "example_instance_id" {
+    value = aws_instance.tf-example.id
+}
