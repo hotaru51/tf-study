@@ -34,12 +34,7 @@ resource "aws_instance" "tf-example" {
         env  = "dev"
     }
 
-    user_data = <<EOF
-#!/bin/bash
-yum install -y httpd
-systemctl enable httpd.service
-systemctl start httpd.service
-    EOF
+    user_data = file("./user_data.sh")
 }
 
 output "example_instance_id" {
